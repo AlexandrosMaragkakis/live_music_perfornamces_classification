@@ -19,9 +19,9 @@ random.shuffle(rows)
 
 # Write the combined rows to a new CSV file
 fieldnames = ['id', 'energy', 'danceability', 'key', 'loudness', 'mode', 'speechiness', 'acousticness', 'instrumentalness', 'liveness', 'valence', 'tempo', 'duration_ms', 'time_signature', 'label']
-with open('merged.csv', 'w', newline='') as f:
+with open('songs.csv', 'w', newline='') as f:
     writer = csv.DictWriter(f, fieldnames=fieldnames)
     writer.writeheader()
     writer.writerows(rows)
 
-print("Combined and shuffled CSV file saved as 'merged.csv'")
+print("Combined and shuffled CSV file saved as 'songs.csv'")
