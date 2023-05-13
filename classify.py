@@ -4,10 +4,10 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
 from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 
 # Load the combined CSV file into a Pandas dataframe
-df = pd.read_csv('merged.csv')
+df = pd.read_csv('songs.csv')
 
 # Drop the first column
 df = df.drop(df.columns[0], axis=1)
