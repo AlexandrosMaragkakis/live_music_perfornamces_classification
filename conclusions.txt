@@ -1,0 +1,77 @@
+Without scaling:
+
+    Random Forest:
+        Accuracy: 0.9354
+        Precision: 0.9368
+        Recall: 0.9284
+        F1 score: 0.9326
+
+    SVM:
+        Accuracy: 0.6706
+        Precision: 0.6060
+        Recall: 0.9016
+        F1 score: 0.7248
+
+    Logistic Regression:
+        Accuracy: 0.5694
+        Precision: 0.5617
+        Recall: 0.4787
+        F1 score: 0.5169
+
+    KNN:
+        Accuracy: 0.6276
+        Precision: 0.6029
+        Recall: 0.6622
+        F1 score: 0.6311
+
+With scaling using StandardScaler():
+
+    Random Forest:
+        Accuracy: 0.9483
+        Precision: 0.9319
+        Recall: 0.9648
+        F1 score: 0.9481
+
+    SVM:
+        Accuracy: 0.9516 !
+        Precision: 0.9323 !
+        Recall: 0.9714 !
+        F1 score: 0.9515 !
+
+    Logistic Regression:
+        Accuracy: 0.9408
+        Precision: 0.9236
+        Recall: 0.9581
+        F1 score: 0.9405
+
+    KNN:
+        Accuracy: 0.9419
+        Precision: 0.9184
+        Recall: 0.9670 
+        F1 score: 0.9421
+
+With scaling using MinMaxScaler():
+
+    Random Forest:
+        Accuracy: 0.9408
+        Precision: 0.9283
+        Recall: 0.9510
+        F1 score: 0.9395
+
+    SVM:
+        Accuracy: 0.9451
+        Precision: 0.9383 !
+        Recall: 0.9488
+        F1 score: 0.9435 
+
+    Logistic Regression:
+        Accuracy: 0.9397
+        Precision: 0.9319 
+        Recall: 0.9443
+        F1 score: 0.9381
+
+    KNN:
+        Accuracy: 0.9397
+        Precision: 0.9244
+        Recall: 0.9532 
+        F1 score: 0.9386

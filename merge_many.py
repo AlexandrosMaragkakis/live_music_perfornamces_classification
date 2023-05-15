@@ -1,25 +1,28 @@
 import csv
-import random
+import glob
 
-# Read the CSV files
-live_csv = csv.DictReader(open('live.csv'))
-studio_csv = csv.DictReader(open('studio.csv'))
 
-# Combine the rows
-rows = []
-for row in live_csv:
-    rows.append(row)
-for row in studio_csv:
-    rows.append(row)
 
-# Shuffle the rows
-random.shuffle(rows)
+data=[]
+files = glob.glob("data/*.csv")
+
+for file in files:
+
+    with open(file, 'r') as f:
+        # Read the CSV files
+        reader = csv.DictReader(open(file, 'r'))
+
+        # Combine the rows
+        for row in reader:
+            data.append(row)
+        
 
 # Write the combined rows to a new CSV file
 fieldnames = ['id', 'energy', 'danceability', 'key', 'loudness', 'mode', 'speechiness', 'acousticness', 'instrumentalness', 'liveness', 'valence', 'tempo', 'duration_ms', 'time_signature', 'label']
 with open('songs.csv', 'w', newline='') as f:
     writer = csv.DictWriter(f, fieldnames=fieldnames)
     writer.writeheader()
-    writer.writerows(rows)
+    writer.writerows(data)
 
-print("Combined and shuffled CSV file saved as 'songs.csv'")
+
+print("Saved at 'songs.csv'.")
